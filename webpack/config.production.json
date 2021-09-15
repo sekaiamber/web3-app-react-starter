@@ -1,0 +1,12 @@
+{
+  "REACT_APP_ENV": "TEST",
+  "PROXY_DOMAIN": "",
+  "DOMAIN": "",
+  "STATIC_PATH": "//assets.zjzsxhy.com/dashboard/production/",
+
+
+  "STORAGE_PREFIX": "PRINTHUBS_PRD_",
+
+  "APP_KEY": "467f3ee8f01d3c1e9f6f",
+  "APP_SECRET": "095bffd317d353bbaac040e747a69a69"
+}

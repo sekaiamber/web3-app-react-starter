@@ -1,0 +1,5 @@
+{
+  "REACT_APP_ENV": "TEST",
+  "PROXY_DOMAIN": "",
+  "DOMAIN": ""
+}

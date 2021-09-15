@@ -1,0 +1,10 @@
+{
+  "REACT_APP_ENV": "TEST",
+  "PROXY_DOMAIN": "http://58.216.159.114:10130/",
+  "DOMAIN": "",
+
+  "STORAGE_PREFIX": "PRINTHUBS_DEV_",
+
+  "APP_KEY": "467f3ee8f01d3c1e9f6f",
+  "APP_SECRET": "095bffd317d353bbaac040e747a69a69"
+}
