@@ -28,15 +28,28 @@ function useWeb3() {
     if (provider) {
       try {
         await provider.request({
-          method: 'wallet_addEthereumChain',
-          params: [
-            chainOption,
-          ],
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: chainOption.chainId }],
         });
         return true;
       } catch (error) {
-        toastError('Failed to setup the network in Metamask:', error);
-        return false;
+        if (error.code === 4902) {
+          try {
+            await provider.request({
+              method: 'wallet_addEthereumChain',
+              params: [
+                chainOption,
+              ],
+            });
+            return true;
+          } catch (e) {
+            toastError('Failed to setup the network in Metamask:', e);
+            return false;
+          }
+        } else {
+          toastError('Failed to setup the network in Metamask:', error);
+          return false;
+        }
       }
     } else {
       toastError("Can't setup the BSC network on metamask because window.ethereum is undefined");
